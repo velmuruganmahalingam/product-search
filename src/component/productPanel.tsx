@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Settings, Product } from '../types/productData'
+import { Settings, ProductData } from '../types/ProductData'
 import '../style.css'
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
   onClose: () => void
 }
 
-const availableFields: (keyof Product)[] = ['title', 'description', 'price', 'category']
+const availableFields: (keyof ProductData)[] = ['title', 'description', 'price', 'category']
 
 export function ProductPanel({ current, onSave, onClose }: Props) {
   const [settings, setSettings] = useState(current)
@@ -17,7 +17,7 @@ export function ProductPanel({ current, onSave, onClose }: Props) {
     setSettings(prev => ({ ...prev, [field]: value }))
   }
 
-  const toggleFieldSelection = (field: keyof Product) => {
+  const toggleFieldSelection = (field: keyof ProductData) => {
     const isSelected = settings.fields.includes(field)
     const updatedFields = isSelected ? settings.fields.filter(f => f !== field) : [...settings.fields, field]
     setSettings(prev => ({ ...prev, fields: updatedFields }))

@@ -1,4 +1,4 @@
-export interface Product {
+export interface ProductData {
     id: number
     title: string
     description: string
@@ -7,7 +7,7 @@ export interface Product {
 }
 
 export interface Settings {
-    fields: (keyof Product)[]
+    fields: (keyof ProductData)[]
     caseSensitive: boolean
     exact: boolean
     max: number

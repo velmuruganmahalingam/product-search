@@ -1,6 +1,6 @@
-import { Product } from '../types/productData'
+import { ProductData } from '../types/ProductData'
 
-export const products: Product[] = [
+export const products: ProductData[] = [
     { id: 1, title: 'red t-shirt', description: 'soft cotton t shirt', price: 20, category: 'clothing' },
     { id: 2, title: 'red shirt', description: 'formal cotton shirt', price: 25, category: 'clothing' },
     { id: 3, title: 'laptop sleeve', description: 'protective laptop case', price: 10, category: 'accessories' },

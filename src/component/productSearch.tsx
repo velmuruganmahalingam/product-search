@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
-import { Settings } from '../types/productData'
-import { ProductPanel } from './productPanel'
+import { Settings } from '../types/ProductData'
+import { ProductPanel } from './ProductPanel'
 import { products } from '../data/Product'
 import '../style.css'
 
