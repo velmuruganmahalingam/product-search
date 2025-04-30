@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { Settings } from '../types/productData'
-import { SettingsPanel } from './productPanel'
-import { products } from '../data/mockData'
+import { ProductPanel } from './productPanel'
+import { products } from '../data/Product'
 import '../style.css'
 
 const defaultSearchSettings: Settings = {
@@ -71,7 +71,7 @@ export function ProductSearchPage() {
             {/* Show the settings panel below the search box */}
             {openModal && (
                 <div className="settings-panel">
-                    <SettingsPanel
+                    <ProductPanel
                         current={searchSettings}
                         onSave={handleSettingsSave}
                         onClose={() => setOpenModal(false)}

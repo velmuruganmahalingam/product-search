@@ -10,7 +10,7 @@ interface Props {
 
 const availableFields: (keyof Product)[] = ['title', 'description', 'price', 'category']
 
-export function SettingsPanel({ current, onSave, onClose }: Props) {
+export function ProductPanel({ current, onSave, onClose }: Props) {
   const [settings, setSettings] = useState(current)
 
   const handleFieldChange = (field: keyof Settings, value: any) => {
